@@ -24,6 +24,8 @@ map <F7> :!cargo build<CR>
 "barbar keymaps
 nnoremap <A-right> :BufferNext<CR>
 nnoremap <A-left> :BufferPrevious<CR>
+nnoremap <A-L> :BufferNext<CR>
+nnoremap <A-H> :BufferPrevious<CR>
 nnoremap <A-&> :BufferGoto 1<CR>
 nnoremap <A-é> :BufferGoto 2<CR>
 nnoremap <A-"> :BufferGoto 3<CR>

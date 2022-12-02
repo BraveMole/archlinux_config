@@ -13,7 +13,6 @@ Plug 'lighttiger2505/deoplete-vim-lsp'
 Plug 'vim-syntastic/syntastic'
 Plug 'rhysd/vim-clang-format'
 Plug 'luochen1990/rainbow'
-Plug 'tanvirtin/vgit.nvim'
 " setting with vim-lsp
 if executable('ccls')
    au User lsp_setup call lsp#register_server({
