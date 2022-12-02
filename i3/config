@@ -47,8 +47,8 @@ bindsym $mod+Ctrl+m exec pavucontrol
 ################################################################################################
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
-bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
+bindsym XF86MonBrightnessUp exec "backlight -inc 10"
+bindsym XF86MonBrightnessDown exec "backlight -dec 10"
 
 focus_follows_mouse no
 
@@ -225,8 +225,9 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id xautolock -time 10 -locker blurlock
+exec --no-startup-id pulseaudio
 exec_always --no-startup-id feh --bg-fill --randomize ~/Images/backgrounds/*
-exec /usr/bin/picom &
+exec /usr/bin/picom
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
