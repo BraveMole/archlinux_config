@@ -9,6 +9,8 @@ nmap <C-V> "+P<CR>
 "coc keymaps
 map <A-d> <Plug>(coc-definition)
 
+inoremap <silent><expr> <TAB> pumvisible() ? coc#_select_confirm() : "\<TAB>"
+
 "telescope keymaps 
 nnoremap <leader>ff <Cmd>Telescope find_files<CR>
 nnoremap <leader>fg <Cmd>Telescope live_grep<CR>
