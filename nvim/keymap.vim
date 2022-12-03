@@ -7,19 +7,17 @@ imap <C-V> <ESC>"+P<CR>
 nmap <C-V> "+P<CR>
 
 "coc keymaps
-map <A-d> <Plug>(coc-definition)
-
-inoremap <silent><expr> <TAB> pumvisible() ? coc#_select_confirm() : "\<TAB>"
+map <leader>d <Plug>(coc-definition)
+nmap <leader>rn <Plug>(coc-rename)
+inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#confirm() : "\<Tab>" 
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#next(1) : "\<C-h>"
+inoremap <expr><A-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
 "telescope keymaps 
 nnoremap <leader>ff <Cmd>Telescope find_files<CR>
 nnoremap <leader>fg <Cmd>Telescope live_grep<CR>
 nnoremap <leader>fb <Cmd>Telescope buffers<CR>
 nnoremap <leader>fh <Cmd>Telescope help_tags<CR>
-
-"cargo keymaps
-map <F5> :!cargo run<CR>
-map <F7> :!cargo build<CR>
 
 "barbar keymaps
 nnoremap <A-right> :BufferNext<CR>
@@ -50,4 +48,4 @@ nnoremap <C-S-right> <C-W>v
 nnoremap <A-z> :NvimTreeToggle<CR>:NvimTreeRefresh<CR>
 
 "clang format keymaps
-nnoremap <C-s> :ClangFormat<CR>:w<CR>
+nnoremap <C-s> :ClangFormat<CR>

@@ -6,6 +6,8 @@
 
 config_version: 2
 settings:
+  content.notifications.enabled:
+    https://iq.opengenus.org: false
   statusbar.show:
     global: in-mode
   tabs.show:
